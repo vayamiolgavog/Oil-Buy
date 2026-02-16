@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oil Game: Sell, Buy & Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>🛢️ Oil Game</h1>
+        <p>Buy low, sell high, and upgrade your operation.</p>
+      </header>
+
+      <section class="stats" aria-label="Player stats">
+        <div class="card"><span>Day</span><strong id="day">1</strong></div>
+        <div class="card"><span>Cash</span><strong id="cash">$1000</strong></div>
+        <div class="card"><span>Oil Stock</span><strong id="oilStock">0</strong></div>
+        <div class="card"><span>Storage</span><strong id="capacity">50</strong></div>
+        <div class="card"><span>Pump Level</span><strong id="pumpLevel">1</strong></div>
+        <div class="card"><span>Market Price</span><strong id="price">$20</strong></div>
+      </section>
+
+      <section class="panel" aria-label="Oil market">
+        <h2>Market</h2>
+        <p id="marketHint">The price changes every day.</p>
+        <div class="actions">
+          <label>
+            Quantity
+            <input id="qty" type="number" min="1" value="5" />
+          </label>
+          <button id="buyBtn">Buy Oil</button>
+          <button id="sellBtn">Sell Oil</button>
+          <button id="nextDayBtn" class="secondary">Next Day</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Production">
+        <h2>Production</h2>
+        <p>Pump oil each day based on your pump level.</p>
+        <div class="actions">
+          <button id="pumpBtn">Pump Oil</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Shop">
+        <h2>Shop</h2>
+        <div class="shop-grid">
+          <article>
+            <h3>Upgrade Storage</h3>
+            <p>+25 capacity</p>
+            <p>Cost: <strong id="storageCost">$400</strong></p>
+            <button id="storageBtn">Buy Upgrade</button>
+          </article>
+          <article>
+            <h3>Upgrade Pump</h3>
+            <p>+2 oil per pump action</p>
+            <p>Cost: <strong id="pumpCost">$500</strong></p>
+            <button id="pumpUpgradeBtn">Buy Upgrade</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel log" aria-label="Game log">
+        <h2>Log</h2>
+        <ul id="log"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
